@@ -1,0 +1,701 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		9EBA7F281C12B7490097C846 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBA7F271C12B7490097C846 /* Contact.swift */; };
+		9EF17AE11C15710600AD052F /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF17AE01C15710600AD052F /* SettingsViewController.swift */; };
+		9EF17AE31C1584B600AD052F /* AddedMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF17AE21C1584B600AD052F /* AddedMeViewController.swift */; };
+		9EF234DE1C11316B005D95FC /* RendezvousViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EF234DD1C11316B005D95FC /* RendezvousViewController.swift */; };
+		9EF234E41C1182F7005D95FC /* LaunchImage2.png in Resources */ = {isa = PBXBuildFile; fileRef = 9EF234E31C1182F7005D95FC /* LaunchImage2.png */; };
+		9EFD8D8F1C0FE0F2009C6C72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EFD8D8E1C0FE0F2009C6C72 /* AppDelegate.swift */; };
+		9EFD8D911C0FE0F2009C6C72 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EFD8D901C0FE0F2009C6C72 /* LoginViewController.swift */; };
+		9EFD8D941C0FE0F2009C6C72 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EFD8D921C0FE0F2009C6C72 /* Main.storyboard */; };
+		9EFD8D961C0FE0F2009C6C72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EFD8D951C0FE0F2009C6C72 /* Assets.xcassets */; };
+		9EFD8D991C0FE0F2009C6C72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9EFD8D971C0FE0F2009C6C72 /* LaunchScreen.storyboard */; };
+		9EFD8DA41C0FE0F2009C6C72 /* RendezvousTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EFD8DA31C0FE0F2009C6C72 /* RendezvousTests.swift */; };
+		9EFD8DAF1C0FE0F2009C6C72 /* RendezvousUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EFD8DAE1C0FE0F2009C6C72 /* RendezvousUITests.swift */; };
+		9EFD8DBF1C0FE756009C6C72 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EFD8DBC1C0FE756009C6C72 /* Bolts.framework */; };
+		9EFD8DC01C0FE756009C6C72 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EFD8DBD1C0FE756009C6C72 /* Parse.framework */; };
+		9EFD8DC11C0FE756009C6C72 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EFD8DBE1C0FE756009C6C72 /* ParseUI.framework */; };
+		9EFD8DCC1C0FE7F4009C6C72 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EFD8DC21C0FE7F4009C6C72 /* AudioToolbox.framework */; };
+		9EFD8DCD1C0FE7F4009C6C72 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EFD8DC31C0FE7F4009C6C72 /* CFNetwork.framework */; };
+		9EFD8DCE1C0FE7F4009C6C72 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EFD8DC41C0FE7F4009C6C72 /* CoreGraphics.framework */; };
+		9EFD8DCF1C0FE7F4009C6C72 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EFD8DC51C0FE7F4009C6C72 /* CoreLocation.framework */; };
+		9EFD8DD01C0FE7F4009C6C72 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EFD8DC61C0FE7F4009C6C72 /* libsqlite3.tbd */; };
+		9EFD8DD11C0FE7F4009C6C72 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EFD8DC71C0FE7F4009C6C72 /* libz.tbd */; };
+		9EFD8DD21C0FE7F4009C6C72 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EFD8DC81C0FE7F4009C6C72 /* QuartzCore.framework */; };
+		9EFD8DD31C0FE7F4009C6C72 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EFD8DC91C0FE7F4009C6C72 /* Security.framework */; };
+		9EFD8DD41C0FE7F4009C6C72 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EFD8DCA1C0FE7F4009C6C72 /* StoreKit.framework */; };
+		9EFD8DD51C0FE7F4009C6C72 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EFD8DCB1C0FE7F4009C6C72 /* SystemConfiguration.framework */; };
+		9EFD8DDA1C0FEB50009C6C72 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EFD8DD91C0FEB50009C6C72 /* SignUpViewController.swift */; };
+		9EFD8DDC1C100EBE009C6C72 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EFD8DDB1C100EBE009C6C72 /* MainViewController.swift */; };
+		9EFD8DDE1C1034C9009C6C72 /* Gabriola.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9EFD8DDD1C1034C9009C6C72 /* Gabriola.ttf */; };
+		BED805F857A3ED08DFED5281 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 612C12277E2616CCAD406662 /* libPods.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9EFD8DA01C0FE0F2009C6C72 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9EFD8D831C0FE0F2009C6C72 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9EFD8D8A1C0FE0F2009C6C72;
+			remoteInfo = Rendezvous;
+		};
+		9EFD8DAB1C0FE0F2009C6C72 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9EFD8D831C0FE0F2009C6C72 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9EFD8D8A1C0FE0F2009C6C72;
+			remoteInfo = Rendezvous;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		33BFE3A7320DAFF5A6E29420 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		476FEF82DB38E9D831A85FEA /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		612C12277E2616CCAD406662 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		9EBA7F271C12B7490097C846 /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		9EF17AE01C15710600AD052F /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		9EF17AE21C1584B600AD052F /* AddedMeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddedMeViewController.swift; sourceTree = "<group>"; };
+		9EF234DD1C11316B005D95FC /* RendezvousViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RendezvousViewController.swift; sourceTree = "<group>"; };
+		9EF234E31C1182F7005D95FC /* LaunchImage2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchImage2.png; sourceTree = "<group>"; };
+		9EFD8D8B1C0FE0F2009C6C72 /* Rendezvous.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Rendezvous.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9EFD8D8E1C0FE0F2009C6C72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9EFD8D901C0FE0F2009C6C72 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		9EFD8D931C0FE0F2009C6C72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9EFD8D951C0FE0F2009C6C72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9EFD8D981C0FE0F2009C6C72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9EFD8D9A1C0FE0F2009C6C72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9EFD8D9F1C0FE0F2009C6C72 /* RendezvousTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RendezvousTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9EFD8DA31C0FE0F2009C6C72 /* RendezvousTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RendezvousTests.swift; sourceTree = "<group>"; };
+		9EFD8DA51C0FE0F2009C6C72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9EFD8DAA1C0FE0F2009C6C72 /* RendezvousUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RendezvousUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9EFD8DAE1C0FE0F2009C6C72 /* RendezvousUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RendezvousUITests.swift; sourceTree = "<group>"; };
+		9EFD8DB01C0FE0F2009C6C72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9EFD8DBC1C0FE756009C6C72 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		9EFD8DBD1C0FE756009C6C72 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		9EFD8DBE1C0FE756009C6C72 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
+		9EFD8DC21C0FE7F4009C6C72 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		9EFD8DC31C0FE7F4009C6C72 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		9EFD8DC41C0FE7F4009C6C72 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		9EFD8DC51C0FE7F4009C6C72 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		9EFD8DC61C0FE7F4009C6C72 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		9EFD8DC71C0FE7F4009C6C72 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		9EFD8DC81C0FE7F4009C6C72 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		9EFD8DC91C0FE7F4009C6C72 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		9EFD8DCA1C0FE7F4009C6C72 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		9EFD8DCB1C0FE7F4009C6C72 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		9EFD8DD61C0FE82E009C6C72 /* Rendezvous-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Rendezvous-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
+		9EFD8DD91C0FEB50009C6C72 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		9EFD8DDB1C100EBE009C6C72 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		9EFD8DDD1C1034C9009C6C72 /* Gabriola.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Gabriola.ttf; path = ../../../../../../../../../../Library/Fonts/Microsoft/Gabriola.ttf; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9EFD8D881C0FE0F2009C6C72 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9EFD8DCC1C0FE7F4009C6C72 /* AudioToolbox.framework in Frameworks */,
+				9EFD8DCD1C0FE7F4009C6C72 /* CFNetwork.framework in Frameworks */,
+				9EFD8DCE1C0FE7F4009C6C72 /* CoreGraphics.framework in Frameworks */,
+				9EFD8DCF1C0FE7F4009C6C72 /* CoreLocation.framework in Frameworks */,
+				9EFD8DD01C0FE7F4009C6C72 /* libsqlite3.tbd in Frameworks */,
+				9EFD8DD11C0FE7F4009C6C72 /* libz.tbd in Frameworks */,
+				9EFD8DD21C0FE7F4009C6C72 /* QuartzCore.framework in Frameworks */,
+				9EFD8DD31C0FE7F4009C6C72 /* Security.framework in Frameworks */,
+				9EFD8DD41C0FE7F4009C6C72 /* StoreKit.framework in Frameworks */,
+				9EFD8DD51C0FE7F4009C6C72 /* SystemConfiguration.framework in Frameworks */,
+				9EFD8DC11C0FE756009C6C72 /* ParseUI.framework in Frameworks */,
+				9EFD8DC01C0FE756009C6C72 /* Parse.framework in Frameworks */,
+				9EFD8DBF1C0FE756009C6C72 /* Bolts.framework in Frameworks */,
+				BED805F857A3ED08DFED5281 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9EFD8D9C1C0FE0F2009C6C72 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9EFD8DA71C0FE0F2009C6C72 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2EACAB7203370985CCEAC740 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				33BFE3A7320DAFF5A6E29420 /* Pods.debug.xcconfig */,
+				476FEF82DB38E9D831A85FEA /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		9EFD8D821C0FE0F2009C6C72 = {
+			isa = PBXGroup;
+			children = (
+				9EFD8DC21C0FE7F4009C6C72 /* AudioToolbox.framework */,
+				9EFD8DC31C0FE7F4009C6C72 /* CFNetwork.framework */,
+				9EFD8DC41C0FE7F4009C6C72 /* CoreGraphics.framework */,
+				9EFD8DC51C0FE7F4009C6C72 /* CoreLocation.framework */,
+				9EFD8DC61C0FE7F4009C6C72 /* libsqlite3.tbd */,
+				9EFD8DC71C0FE7F4009C6C72 /* libz.tbd */,
+				9EFD8DC81C0FE7F4009C6C72 /* QuartzCore.framework */,
+				9EFD8DC91C0FE7F4009C6C72 /* Security.framework */,
+				9EFD8DCA1C0FE7F4009C6C72 /* StoreKit.framework */,
+				9EFD8DCB1C0FE7F4009C6C72 /* SystemConfiguration.framework */,
+				9EFD8DBC1C0FE756009C6C72 /* Bolts.framework */,
+				9EFD8DBD1C0FE756009C6C72 /* Parse.framework */,
+				9EFD8DBE1C0FE756009C6C72 /* ParseUI.framework */,
+				9EFD8D8D1C0FE0F2009C6C72 /* Rendezvous */,
+				9EFD8DA21C0FE0F2009C6C72 /* RendezvousTests */,
+				9EFD8DAD1C0FE0F2009C6C72 /* RendezvousUITests */,
+				9EFD8D8C1C0FE0F2009C6C72 /* Products */,
+				2EACAB7203370985CCEAC740 /* Pods */,
+				C332B716FF9B42945FC5A987 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		9EFD8D8C1C0FE0F2009C6C72 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9EFD8D8B1C0FE0F2009C6C72 /* Rendezvous.app */,
+				9EFD8D9F1C0FE0F2009C6C72 /* RendezvousTests.xctest */,
+				9EFD8DAA1C0FE0F2009C6C72 /* RendezvousUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9EFD8D8D1C0FE0F2009C6C72 /* Rendezvous */ = {
+			isa = PBXGroup;
+			children = (
+				9EFD8DD61C0FE82E009C6C72 /* Rendezvous-Bridging-Header.h */,
+				9EFD8D8E1C0FE0F2009C6C72 /* AppDelegate.swift */,
+				9EFD8D901C0FE0F2009C6C72 /* LoginViewController.swift */,
+				9EFD8DD91C0FEB50009C6C72 /* SignUpViewController.swift */,
+				9EFD8D921C0FE0F2009C6C72 /* Main.storyboard */,
+				9EF17AE21C1584B600AD052F /* AddedMeViewController.swift */,
+				9EF17AE01C15710600AD052F /* SettingsViewController.swift */,
+				9EF234DD1C11316B005D95FC /* RendezvousViewController.swift */,
+				9EBA7F271C12B7490097C846 /* Contact.swift */,
+				9EFD8DDB1C100EBE009C6C72 /* MainViewController.swift */,
+				9EF234E31C1182F7005D95FC /* LaunchImage2.png */,
+				9EFD8D951C0FE0F2009C6C72 /* Assets.xcassets */,
+				9EFD8D971C0FE0F2009C6C72 /* LaunchScreen.storyboard */,
+				9EFD8DDD1C1034C9009C6C72 /* Gabriola.ttf */,
+				9EFD8D9A1C0FE0F2009C6C72 /* Info.plist */,
+			);
+			path = Rendezvous;
+			sourceTree = "<group>";
+		};
+		9EFD8DA21C0FE0F2009C6C72 /* RendezvousTests */ = {
+			isa = PBXGroup;
+			children = (
+				9EFD8DA31C0FE0F2009C6C72 /* RendezvousTests.swift */,
+				9EFD8DA51C0FE0F2009C6C72 /* Info.plist */,
+			);
+			path = RendezvousTests;
+			sourceTree = "<group>";
+		};
+		9EFD8DAD1C0FE0F2009C6C72 /* RendezvousUITests */ = {
+			isa = PBXGroup;
+			children = (
+				9EFD8DAE1C0FE0F2009C6C72 /* RendezvousUITests.swift */,
+				9EFD8DB01C0FE0F2009C6C72 /* Info.plist */,
+			);
+			path = RendezvousUITests;
+			sourceTree = "<group>";
+		};
+		C332B716FF9B42945FC5A987 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				612C12277E2616CCAD406662 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9EFD8D8A1C0FE0F2009C6C72 /* Rendezvous */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9EFD8DB31C0FE0F2009C6C72 /* Build configuration list for PBXNativeTarget "Rendezvous" */;
+			buildPhases = (
+				7F0C1A8B5113A7522F6FB448 /* Check Pods Manifest.lock */,
+				9EFD8D871C0FE0F2009C6C72 /* Sources */,
+				9EFD8D881C0FE0F2009C6C72 /* Frameworks */,
+				9EFD8D891C0FE0F2009C6C72 /* Resources */,
+				359B82A8484EF7CF55DDBC15 /* Embed Pods Frameworks */,
+				47AFCCF779F5585B5CEA476B /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Rendezvous;
+			productName = Rendezvous;
+			productReference = 9EFD8D8B1C0FE0F2009C6C72 /* Rendezvous.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9EFD8D9E1C0FE0F2009C6C72 /* RendezvousTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9EFD8DB61C0FE0F2009C6C72 /* Build configuration list for PBXNativeTarget "RendezvousTests" */;
+			buildPhases = (
+				9EFD8D9B1C0FE0F2009C6C72 /* Sources */,
+				9EFD8D9C1C0FE0F2009C6C72 /* Frameworks */,
+				9EFD8D9D1C0FE0F2009C6C72 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9EFD8DA11C0FE0F2009C6C72 /* PBXTargetDependency */,
+			);
+			name = RendezvousTests;
+			productName = RendezvousTests;
+			productReference = 9EFD8D9F1C0FE0F2009C6C72 /* RendezvousTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		9EFD8DA91C0FE0F2009C6C72 /* RendezvousUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9EFD8DB91C0FE0F2009C6C72 /* Build configuration list for PBXNativeTarget "RendezvousUITests" */;
+			buildPhases = (
+				9EFD8DA61C0FE0F2009C6C72 /* Sources */,
+				9EFD8DA71C0FE0F2009C6C72 /* Frameworks */,
+				9EFD8DA81C0FE0F2009C6C72 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9EFD8DAC1C0FE0F2009C6C72 /* PBXTargetDependency */,
+			);
+			name = RendezvousUITests;
+			productName = RendezvousUITests;
+			productReference = 9EFD8DAA1C0FE0F2009C6C72 /* RendezvousUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9EFD8D831C0FE0F2009C6C72 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = Girsova;
+				TargetAttributes = {
+					9EFD8D8A1C0FE0F2009C6C72 = {
+						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = JV27EC9686;
+					};
+					9EFD8D9E1C0FE0F2009C6C72 = {
+						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = 4UHJCFWZ8Y;
+						TestTargetID = 9EFD8D8A1C0FE0F2009C6C72;
+					};
+					9EFD8DA91C0FE0F2009C6C72 = {
+						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = 4UHJCFWZ8Y;
+						TestTargetID = 9EFD8D8A1C0FE0F2009C6C72;
+					};
+				};
+			};
+			buildConfigurationList = 9EFD8D861C0FE0F2009C6C72 /* Build configuration list for PBXProject "Rendezvous" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9EFD8D821C0FE0F2009C6C72;
+			productRefGroup = 9EFD8D8C1C0FE0F2009C6C72 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9EFD8D8A1C0FE0F2009C6C72 /* Rendezvous */,
+				9EFD8D9E1C0FE0F2009C6C72 /* RendezvousTests */,
+				9EFD8DA91C0FE0F2009C6C72 /* RendezvousUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9EFD8D891C0FE0F2009C6C72 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9EFD8D991C0FE0F2009C6C72 /* LaunchScreen.storyboard in Resources */,
+				9EFD8DDE1C1034C9009C6C72 /* Gabriola.ttf in Resources */,
+				9EFD8D961C0FE0F2009C6C72 /* Assets.xcassets in Resources */,
+				9EFD8D941C0FE0F2009C6C72 /* Main.storyboard in Resources */,
+				9EF234E41C1182F7005D95FC /* LaunchImage2.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9EFD8D9D1C0FE0F2009C6C72 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9EFD8DA81C0FE0F2009C6C72 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		359B82A8484EF7CF55DDBC15 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		47AFCCF779F5585B5CEA476B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7F0C1A8B5113A7522F6FB448 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9EFD8D871C0FE0F2009C6C72 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9EBA7F281C12B7490097C846 /* Contact.swift in Sources */,
+				9EF17AE31C1584B600AD052F /* AddedMeViewController.swift in Sources */,
+				9EFD8DDA1C0FEB50009C6C72 /* SignUpViewController.swift in Sources */,
+				9EF17AE11C15710600AD052F /* SettingsViewController.swift in Sources */,
+				9EFD8D911C0FE0F2009C6C72 /* LoginViewController.swift in Sources */,
+				9EFD8D8F1C0FE0F2009C6C72 /* AppDelegate.swift in Sources */,
+				9EF234DE1C11316B005D95FC /* RendezvousViewController.swift in Sources */,
+				9EFD8DDC1C100EBE009C6C72 /* MainViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9EFD8D9B1C0FE0F2009C6C72 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9EFD8DA41C0FE0F2009C6C72 /* RendezvousTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9EFD8DA61C0FE0F2009C6C72 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9EFD8DAF1C0FE0F2009C6C72 /* RendezvousUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9EFD8DA11C0FE0F2009C6C72 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9EFD8D8A1C0FE0F2009C6C72 /* Rendezvous */;
+			targetProxy = 9EFD8DA01C0FE0F2009C6C72 /* PBXContainerItemProxy */;
+		};
+		9EFD8DAC1C0FE0F2009C6C72 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9EFD8D8A1C0FE0F2009C6C72 /* Rendezvous */;
+			targetProxy = 9EFD8DAB1C0FE0F2009C6C72 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9EFD8D921C0FE0F2009C6C72 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9EFD8D931C0FE0F2009C6C72 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9EFD8D971C0FE0F2009C6C72 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9EFD8D981C0FE0F2009C6C72 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9EFD8DB11C0FE0F2009C6C72 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Elizaveta Girsova (2N8LWMZ64U)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Elizaveta Girsova (2N8LWMZ64U)";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "7c2c1395-8640-4a9f-aa0d-7a9a984b9925";
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		9EFD8DB21C0FE0F2009C6C72 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Elizaveta Girsova (2N8LWMZ64U)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Elizaveta Girsova (2N8LWMZ64U)";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "7c2c1395-8640-4a9f-aa0d-7a9a984b9925";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9EFD8DB41C0FE0F2009C6C72 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33BFE3A7320DAFF5A6E29420 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Elizaveta Girsova (2N8LWMZ64U)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Elizaveta Girsova (2N8LWMZ64U)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Rendezvous",
+				);
+				INFOPLIST_FILE = Rendezvous/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.elizavetagirsova.Rendezvous;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "7c2c1395-8640-4a9f-aa0d-7a9a984b9925";
+				SWIFT_OBJC_BRIDGING_HEADER = "Rendezvous-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9EFD8DB51C0FE0F2009C6C72 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 476FEF82DB38E9D831A85FEA /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Elizaveta Girsova (2N8LWMZ64U)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Elizaveta Girsova (2N8LWMZ64U)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/Rendezvous",
+				);
+				INFOPLIST_FILE = Rendezvous/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.elizavetagirsova.Rendezvous;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "7c2c1395-8640-4a9f-aa0d-7a9a984b9925";
+				SWIFT_OBJC_BRIDGING_HEADER = "Rendezvous-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		9EFD8DB71C0FE0F2009C6C72 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = RendezvousTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.girsova.RendezvousTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Rendezvous.app/Rendezvous";
+			};
+			name = Debug;
+		};
+		9EFD8DB81C0FE0F2009C6C72 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = RendezvousTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.girsova.RendezvousTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Rendezvous.app/Rendezvous";
+			};
+			name = Release;
+		};
+		9EFD8DBA1C0FE0F2009C6C72 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = RendezvousUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.girsova.RendezvousUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Rendezvous;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		9EFD8DBB1C0FE0F2009C6C72 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = RendezvousUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.girsova.RendezvousUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Rendezvous;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9EFD8D861C0FE0F2009C6C72 /* Build configuration list for PBXProject "Rendezvous" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9EFD8DB11C0FE0F2009C6C72 /* Debug */,
+				9EFD8DB21C0FE0F2009C6C72 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9EFD8DB31C0FE0F2009C6C72 /* Build configuration list for PBXNativeTarget "Rendezvous" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9EFD8DB41C0FE0F2009C6C72 /* Debug */,
+				9EFD8DB51C0FE0F2009C6C72 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9EFD8DB61C0FE0F2009C6C72 /* Build configuration list for PBXNativeTarget "RendezvousTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9EFD8DB71C0FE0F2009C6C72 /* Debug */,
+				9EFD8DB81C0FE0F2009C6C72 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9EFD8DB91C0FE0F2009C6C72 /* Build configuration list for PBXNativeTarget "RendezvousUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9EFD8DBA1C0FE0F2009C6C72 /* Debug */,
+				9EFD8DBB1C0FE0F2009C6C72 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9EFD8D831C0FE0F2009C6C72 /* Project object */;
+}
