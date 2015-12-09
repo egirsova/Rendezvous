@@ -1,0 +1,10 @@
+{
+  "applications": {
+    "Rendezvous": {
+      "applicationId": "GJKpv5B2DuiN0EwNhuRy7bSgiV6MB7VknCxvUSZ4"
+    },
+    "_default": {
+      "link": "Rendezvous"
+    }
+  }
+}
