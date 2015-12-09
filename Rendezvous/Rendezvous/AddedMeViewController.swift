@@ -98,35 +98,26 @@ extension AddedMeViewController: UITableViewDataSource, UITableViewDelegate {
         userQuery?.findObjectsInBackgroundWithBlock { (objects, error) -> Void in
             if error == nil {
                 for object in objects! {
-                    let user = object as! PFUser
+                    let fromUser = object as! PFUser
                     
                     let query = PFQuery(className: "FriendRequest")
-                    query.whereKey("from", equalTo: user)
+                    query.whereKey("from", equalTo: fromUser)
                     
                     query.findObjectsInBackgroundWithBlock { (objects, error) -> Void in
                         if error == nil {
+                            // object here is a friend request
                             for object in objects! {
-                                object.setObject(RequestStatus.accepted, forKey: "status")
-                                object.saveInBackgroundWithBlock { (succeeded, error) -> Void in
-                                    if succeeded {
-                                        // Alert user that request was sent successfully
-                                        print("updated status successfully")
+                                PFCloud.callFunctionInBackground("addFriendToFriendsRelation", withParameters: ["friendRequest": object.objectId!], block: {
+                                    (object, error) -> Void in
+                                    
+                                    if error == nil {
+                                        let relation = PFUser.currentUser()?.relationForKey("Friendship")
+                                        relation?.addObject(fromUser)
+                                        PFUser.currentUser()?.saveInBackground()
                                     } else {
-                                        // Alert user that there was an error
-                                        print("updated status unsuccessfully")
+                                        print(error)
                                     }
-                                }
-                                
-                                // Now create a relation for current user
-                                let relation = PFUser.currentUser()?.relationForKey("Friendship")
-                                relation?.addObject(user)
-                                PFUser.currentUser()?.saveInBackground()
-                                
-                                // Now create relation for requesting user
-                                let relation2 = user.relationForKey("Friendship")
-                                relation2.addObject(PFUser.currentUser()!)
-                                user.saveInBackground()
-                                
+                                })
                             }
                         }
                     }
