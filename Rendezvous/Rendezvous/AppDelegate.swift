@@ -16,10 +16,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         
         // Connect to Parse
-        Parse.setApplicationId(Constants.ApiKeys.parseApplicationId, clientKey: Constants.ApiKeys.parseClientKey)
+        Parse.setApplicationId(ApiKeys.parseApplicationId, clientKey: ApiKeys.parseClientKey)
         
         // Connect to GoogleMaps
-        GMSServices.provideAPIKey(Constants.ApiKeys.googleMapsKey)
+        GMSServices.provideAPIKey(ApiKeys.googleMapsKey)
         
         // Register for push notifications
         let userNotificationSettings = UIUserNotificationSettings(forTypes: [UIUserNotificationType.Alert, UIUserNotificationType.Badge, UIUserNotificationType.Sound], categories: nil)
