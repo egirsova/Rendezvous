@@ -43,3 +43,42 @@ Parse.Cloud.define("addFriendToFriendsRelation", function(request,response) {
         }
     });
 });
+
+Parse.Cloud.define("sendPushToUser", function(request, response){
+    var senderUser = request.user;
+    var recipientUserId = request.params.recipientId;
+    var message = request.params.message;
+    var location = request.params.location;
+    
+    // Validate that the sender is allowed to send to the recipient
+    // Recipient must be a "friend" of the sender
+    var userFriends = senderUser.relation("Friendship");
+    var relationQuery = userFriends.query()
+    relationQuery.get(recipientUserId, {
+        error: function(object, error) {
+          response.error("The recipient is not the user's friend, cannot send push.");  
+        }
+    });
+    
+    // Validate the message text in some way
+    
+    // Send the push
+    // Find the devices associated with the recipient user
+    var recipientUser = new Parse.User();
+    recipientUser.id = recipientUserId
+    var pushQuery = new Parse.Query(Parse.Installation)
+    pushQuery.equalTo("user", recipientUser)
+    
+    // Send the push notification to results of the query
+    Parse.Push.send({
+        where: pushQuery,
+        data: {
+            alert: message,
+            location: location
+        }
+    }).then(function() {
+        response.success("Push was sent successfully")
+    }, function(error) {
+        response.error("Push failed to send with error: "+error.message);
+    });
+});

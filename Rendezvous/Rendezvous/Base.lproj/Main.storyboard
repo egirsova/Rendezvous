@@ -203,7 +203,7 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="contactsTable" destination="l2F-HL-o2x" id="Wsh-Em-wzf"/>
+                        <outlet property="friendsTable" destination="l2F-HL-o2x" id="44K-TG-0gE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OEq-ao-B4c" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -569,6 +569,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Djv-xw-YeE"/>
+        <segue reference="Mte-rB-crY"/>
     </inferredMetricsTieBreakers>
 </document>
