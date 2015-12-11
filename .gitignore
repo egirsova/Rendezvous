@@ -25,7 +25,7 @@ DerivedData
 #
 Pods/
 # Do not add AppDelegate
-/Rendezvous/Rendezvous/AppDelegate.Swift
+/Rendezvous/Rendezvous/Constants.Swift
 # Carthage
 #
 # Add this line if you want to avoid checking in source code from Carthage dependencies.

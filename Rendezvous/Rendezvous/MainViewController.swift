@@ -37,7 +37,7 @@ class MainViewController: UIViewController {
             longitude: 0, zoom: 1)
         mapView.camera = camera
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "addRendezvousPoint:", name: kNewRendezvousPoint, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "addRendezvousPoint:", name: Constants.Notifications.kNewRendezvousPoint, object: nil)
 
     }
 
