@@ -53,7 +53,7 @@ class RendezvousViewController: UIViewController {
         
         let message = "\(PFUser.currentUser()!.username!) wants to Rendezvous"
         let geoLocation = PFGeoPoint(location: CurrentUser.user.location)
-        PFCloud.callFunctionInBackground("sendPushToUser", withParameters: ["recipientId": friend.objectId!, "message": message, "location": geoLocation, "pushNotificationType": ], block: {
+        PFCloud.callFunctionInBackground("sendPushToUser", withParameters: ["recipientId": friend.objectId!, "message": message, "location": geoLocation, "pushNotificationType": Constants.PushNotificationType.initialRequest], block: {
             (object, error) -> Void in
             
             if error == nil {

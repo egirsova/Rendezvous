@@ -56,6 +56,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //PFPush.handlePush(userInfo)
         
         print("userinfo: \(userInfo)")
+        let pushNotificationType = userInfo["pushNotificationType"] as! String
         let receivedMessage = userInfo["aps"]!["alert"]! as! String
         let senderId = userInfo["senderId"]! as! String
         let latitude = userInfo["location"]!["latitude"]! as! NSNumber
@@ -63,27 +64,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let sentLocation = CLLocation(latitude: Double(latitude) , longitude: Double(longitude))
         
-        let alert = UIAlertController(title: "Rendezvous Request", message: receivedMessage+"\nAccept request? \n Accepting request requires sharing your location.", preferredStyle: UIAlertControllerStyle.Alert)
-        let declineAction = UIAlertAction(title: "Decline", style: UIAlertActionStyle.Default, handler: nil)
-        let acceptAction = UIAlertAction(title: "Accept", style: UIAlertActionStyle.Destructive, handler: { action -> Void in
-            print("accept button pressed")
-            print("Location: \(sentLocation)")
+        if pushNotificationType == Constants.PushNotificationType.initialRequest {
             
-            // Now send own location to the other user
-            let message = "\(PFUser.currentUser()!.username!) accepted your Rendezvous request"
-            let geoLocation = PFGeoPoint(location: CurrentUser.user.location)
-            PFCloud.callFunctionInBackground("sendPushToUser", withParameters: ["recipientId": senderId, "message": message, "location": geoLocation], block: {
-                (object, error) -> Void in
-                
-                if error != nil {
-                    print("Error sending own location")
-                }
+            let alert = UIAlertController(title: "Rendezvous Request", message: receivedMessage, preferredStyle: UIAlertControllerStyle.Alert)
+            let declineAction = UIAlertAction(title: "Decline", style: UIAlertActionStyle.Cancel, handler: nil)
+            let acceptAction = UIAlertAction(title: "Accept", style: UIAlertActionStyle.Default, handler: { action -> Void in
+                NSNotificationCenter.defaultCenter().postNotificationName(Constants.Notifications.newRendezvousPoint, object: self, userInfo: ["location": sentLocation])
+                // Now send own location to the other user
+                let message = "\(PFUser.currentUser()!.username!) accepted your Rendezvous request"
+                let geoLocation = PFGeoPoint(location: CurrentUser.user.location)
+                PFCloud.callFunctionInBackground("sendPushToUser", withParameters: ["recipientId": senderId, "message": message, "location": geoLocation, "pushNotificationType": Constants.PushNotificationType.acceptedRequest], block: {
+                    (object, error) -> Void in
+                    
+                    if error != nil {
+                        print("Error sending own location")
+                    }
+                })
             })
-        })
-        alert.addAction(declineAction)
-        alert.addAction(acceptAction)
-        NSNotificationCenter.defaultCenter().postNotificationName(Constants.Notifications.kNewRendezvousPoint, object: self, userInfo: ["location": sentLocation])
-        self.window?.rootViewController!.presentViewController(alert, animated: true, completion: nil)
+            alert.addAction(declineAction)
+            alert.addAction(acceptAction)
+            self.window?.rootViewController!.presentViewController(alert, animated: true, completion: nil)
+            
+        } else if pushNotificationType == Constants.PushNotificationType.acceptedRequest {
+            let alert = UIAlertController(title: "Accepted", message: receivedMessage, preferredStyle: UIAlertControllerStyle.Alert)
+            let acceptAction = UIAlertAction(title: "Okay", style: UIAlertActionStyle.Default, handler: { action -> Void in
+                NSNotificationCenter.defaultCenter().postNotificationName(Constants.Notifications.newRendezvousPoint, object: self, userInfo: ["location": sentLocation])
+            })
+            alert.addAction(acceptAction)
+            self.window?.rootViewController!.presentViewController(alert, animated: true, completion: nil)
+        }
     }
     
     func applicationWillResignActive(application: UIApplication) {

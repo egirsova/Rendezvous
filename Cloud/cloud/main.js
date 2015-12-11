@@ -49,6 +49,7 @@ Parse.Cloud.define("sendPushToUser", function(request, response){
     var recipientUserId = request.params.recipientId;
     var message = request.params.message;
     var location = request.params.location;
+    var pushNotificationType = request.params.pushNotificationType;
     
     // Validate that the sender is allowed to send to the recipient
     // Recipient must be a "friend" of the sender
@@ -75,7 +76,8 @@ Parse.Cloud.define("sendPushToUser", function(request, response){
         data: {
             alert: message,
             location: location,
-            senderId: senderUser.id
+            senderId: senderUser.id,
+            pushNotificationType: pushNotificationType
         }
     }).then(function() {
         response.success("Push was sent successfully")
