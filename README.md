@@ -10,8 +10,8 @@ If you wish to build Rendezvous yourself, you will need the following components
 * iOS SDK (8.0 or later)
 * Git
 * Google Maps iOS SDK
-* Parse iOS SDK
 * PubNub iOS SDK
+* Parse iOS SDK (included in the repository)
 
 #### Instructions
 **Begin by cloning the repository**
@@ -25,7 +25,7 @@ If you wish to build Rendezvous yourself, you will need the following components
 
 	`$ git clone https://github.com/egirsova/Rendezvous.git`
 	
-	Once the repository has been cloned, you will need to install the three third-party APIs. The easiest way to install them is using CocoaPods. Complete the instructions below in order:
+	Once the repository has been cloned, you will need to install the two third-party APIs that are not included in the repository. The easiest way to install them is using CocoaPods. Complete the instructions below in order:
 	  
 **Install CocoaPods Tool (if you don't have it already)**
 	
@@ -67,25 +67,6 @@ If you wish to build Rendezvous yourself, you will need the following components
 	This may take a while. After this is successfully completed, you will have the Google iOS SDK and PubNub iOS SDK installed.
 	
 6. If Xcode is open, close it. From now on you will be using the project's `.xcworkspace` file to open the project.
-
-**Install the Parse iOS SDK**  
-
-Note: You can also install this using CocoaPods by adding `pod 'Parse'` to your previously created `Podfile` and running `pod install`, but described below is the way I installed it for this project (not sure why, please don't ask):
-
-1. Download the SDK using this link: [Download Parse iOS SDK](https://parse.com/downloads/ios/parse-library/latest)
-2. Unzip and drag the following files into the Xcode project folder target: Bolts.framework, Parse.framework, and ParseUI.framework. Make sure you check the "Copy items to destination's group folder" checkbox when prompted
-3. Add the Dependencies by navigating in Xcode to Target -> Rendezvous -> and the Build Phases Tab. Make sure the three files you added in step 2 are shown in the "Link Binary With Libraries" section. In addition, add the following libraries by clicking the "+" in the bottom left:  
-	
-	* AudioToolbox.framework
-	* CFNetwork.framework
-	* CoreGraphics.framework
-	* CoreLocation.framework
-	* QuartzCore.framework
-	* Security.framework
-	* StoreKit.framework
-	* SystemConfiguration.framework
-	* libz.tbd
-	* libsqlite3.tbd
 
 **Get API Keys for all three APIs**
 
