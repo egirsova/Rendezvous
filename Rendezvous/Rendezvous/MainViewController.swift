@@ -115,7 +115,19 @@ extension MainViewController: CLLocationManagerDelegate {
         // here send new location to connected user
         if let connectedUser = CurrentUser.user.connectedUser {
             print("location updated...about to send new location to connected user")
-            CurrentUser.user.pnClient.publish(["type": Constants.PubnubNotificationType.updatedLocation, "latitude": CurrentUser.user.location.coordinate.latitude, "longitude": CurrentUser.user.location.coordinate.longitude], toChannel: CurrentUser.user.connectedUser!, withCompletion: nil)
+//            CurrentUser.user.pnClient.publish(["type": Constants.PubnubNotificationType.updatedLocation, "latitude": CurrentUser.user.location.coordinate.latitude, "longitude": CurrentUser.user.location.coordinate.longitude], toChannel: CurrentUser.user.connectedUser!, withCompletion: nil)
+            
+            let message = ["type": Constants.PubnubNotificationType.updatedLocation, "latitude": CurrentUser.user.location.coordinate.latitude, "longitude": CurrentUser.user.location.coordinate.longitude]
+            
+            PFCloud.callFunctionInBackground("httpRequest", withParameters: ["recipientId": CurrentUser.user.connectedUser!, "message": message], block: {
+                (object, error) -> Void in
+                
+                if error != nil {
+                    // show confirmation
+                    print("could not share location")
+                }
+            })
+
         }
     }
     

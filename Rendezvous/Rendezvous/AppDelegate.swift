@@ -157,6 +157,7 @@ extension AppDelegate: PNObjectEventListener {
             // message.data.subscribedChannel
         }
         
+        print("Received notification: \(message.data.message)")
         if let notificationType = message.data.message["type"] {
             let typeString = notificationType as! String
             if typeString == Constants.PubnubNotificationType.updatedLocation {

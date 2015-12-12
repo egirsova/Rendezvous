@@ -26,6 +26,7 @@ DerivedData
 Pods/
 # Do not add AppDelegate
 /Rendezvous/Rendezvous/ApiKeys.Swift
+/Cloud/cloud/api-keys.js
 # Carthage
 #
 # Add this line if you want to avoid checking in source code from Carthage dependencies.

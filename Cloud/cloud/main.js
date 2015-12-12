@@ -1,4 +1,3 @@
-
 // Use Parse.Cloud.define to define as many cloud functions as you want.
 
 Parse.Cloud.define("addFriendToFriendsRelation", function(request,response) {
@@ -80,8 +79,29 @@ Parse.Cloud.define("sendPushToUser", function(request, response){
             pushNotificationType: pushNotificationType
         }
     }).then(function() {
-        response.success("Push was sent successfully")
+        response.success("Push was sent successfully");
     }, function(error) {
         response.error("Push failed to send with error: "+error.message);
+    });
+});
+
+Parse.Cloud.define("httpRequest", function(request, response){
+    var apiKeys = require('cloud/api-keys.js');
+    var channel = request.params.recipientId
+    var message = request.params.message
+    Parse.Cloud.httpRequest({
+        url: 'http://pubsub.pubnub.com/publish/' + 
+         apiKeys.pubnub('publishKey')   +   '/' + 
+         apiKeys.pubnub('subscribeKey') + '/0/' + 
+         channel          + '/0/' + 
+         encodeURIComponent(JSON.stringify(message)),
+    success: function(httpResponse) {
+            console.log(httpResponse.text);
+            response.success(httpResponse.text);
+        },
+        error: function(httpResponse) {
+            console.error('Request failed with response code ' + httpResponse.status);
+            response.error('Request failed with response code ' + httpResponse.status);
+        }
     });
 });
