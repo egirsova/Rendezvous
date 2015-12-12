@@ -87,8 +87,6 @@ Note: You can also install this using CocoaPods by adding `pod 'Parse'` to your 
 	* libz.tbd
 	* libsqlite3.tbd
 
-	**Note**: not all of these frameworks may be necessary for your app (such as CoreLocation or StoreKit)
-
 **Get API Keys for all three APIs**
 
 1. Create accounts at all three APIs and register the app to generate keys. Instructions are available at each of their developer websites:  
