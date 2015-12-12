@@ -11,6 +11,11 @@ import Foundation
 struct Constants {
     struct Notifications {
         static let newRendezvousPoint = "newRendezvousPointNotification"
+        static let connectedUserUpdatedLocation = "connectedUserUpdatedLocation"
+    }
+    
+    struct PubnubNotificationType {
+        static let updatedLocation = "updatedLocation"
     }
     
     struct PushNotificationType {

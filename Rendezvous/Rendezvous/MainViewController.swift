@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import PubNub
 
 class MainViewController: UIViewController {
     
@@ -14,6 +15,7 @@ class MainViewController: UIViewController {
     @IBOutlet var mapView: GMSMapView!
     @IBOutlet var addressLabel: UILabel!
     var currentLocation: CLLocation?
+    var connectedUserMarker: GMSMarker?
     
     var kNewRendezvousPoint = "newRendezvousPointNotification"
     
@@ -38,6 +40,7 @@ class MainViewController: UIViewController {
         mapView.camera = camera
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "addRendezvousPoint:", name: Constants.Notifications.newRendezvousPoint, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "updateConnectedUserLocation:", name: Constants.Notifications.connectedUserUpdatedLocation, object: nil)
 
     }
 
@@ -48,15 +51,22 @@ class MainViewController: UIViewController {
     
     func addRendezvousPoint(notification: NSNotification) {
         let userInfo:Dictionary<String,CLLocation> = notification.userInfo as! Dictionary<String,CLLocation>
-        userInfo
         let targetLocation = userInfo["location"]
         
-        let marker = GMSMarker()
-        marker.position = CLLocationCoordinate2DMake(targetLocation!.coordinate.latitude, targetLocation!.coordinate.longitude)
-        marker.title = "Target"
-        marker.snippet = "Target"
-        marker.icon = GMSMarker.markerImageWithColor(UIColor.redColor())
-        marker.map = mapView
+        connectedUserMarker = GMSMarker()
+        connectedUserMarker!.position = CLLocationCoordinate2DMake(targetLocation!.coordinate.latitude, targetLocation!.coordinate.longitude)
+        connectedUserMarker!.title = "Target"
+        connectedUserMarker!.snippet = "Target"
+        connectedUserMarker!.icon = GMSMarker.markerImageWithColor(UIColor.redColor())
+        connectedUserMarker!.map = mapView
+    }
+    
+    func updateConnectedUserLocation(notification: NSNotification) {
+        let userInfo:Dictionary<String,CLLocation> = notification.userInfo as! Dictionary<String,CLLocation>
+        let newTargetLocation = userInfo["location"]
+        
+        connectedUserMarker!.position = CLLocationCoordinate2DMake(newTargetLocation!.coordinate.latitude, newTargetLocation!.coordinate.longitude)
+        
     }
     
     @IBAction func logoutButtonPressed(sender: UIButton) {
@@ -101,6 +111,12 @@ extension MainViewController: CLLocationManagerDelegate {
         CurrentUser.user.location = location!
         
         reverseGeocodeCoordinate(location!.coordinate)
+        
+        // here send new location to connected user
+        if let connectedUser = CurrentUser.user.connectedUser {
+            print("location updated...about to send new location to connected user")
+            CurrentUser.user.pnClient.publish(["type": Constants.PubnubNotificationType.updatedLocation, "latitude": CurrentUser.user.location.coordinate.latitude, "longitude": CurrentUser.user.location.coordinate.longitude], toChannel: CurrentUser.user.connectedUser!, withCompletion: nil)
+        }
     }
     
     func reverseGeocodeCoordinate(coordinate: CLLocationCoordinate2D) {

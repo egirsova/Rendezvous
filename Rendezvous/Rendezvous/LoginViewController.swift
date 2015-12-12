@@ -8,13 +8,6 @@
 
 import UIKit
 
-class CurrentUser {
-    struct user {
-        static var pfUser = PFUser.currentUser()
-        static var location: CLLocation = CLLocation()
-    }
-}
-
 class LoginViewController: UIViewController {
     
     @IBOutlet var usernameTF: UITextField!
@@ -42,6 +35,7 @@ class LoginViewController: UIViewController {
         self.spinner.startAnimating()
         PFUser.logInWithUsernameInBackground(usernameTF.text!, password: passTF.text!) { user, error in
             if user != nil {
+                CurrentUser.user.pnClient.subscribeToChannels([PFUser.currentUser()!.objectId!], withPresence: true)
                 let storyboard = UIStoryboard(name: "Main", bundle: NSBundle.mainBundle())
                 let mainView: UIViewController = storyboard.instantiateViewControllerWithIdentifier("mainView") as UIViewController
                 self.presentViewController(mainView, animated: true, completion: nil)

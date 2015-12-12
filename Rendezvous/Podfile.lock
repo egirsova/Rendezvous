@@ -1,10 +1,26 @@
 PODS:
+  - CocoaLumberjack (2.2.0):
+    - CocoaLumberjack/Default (= 2.2.0)
+    - CocoaLumberjack/Extensions (= 2.2.0)
+  - CocoaLumberjack/Core (2.2.0)
+  - CocoaLumberjack/Default (2.2.0):
+    - CocoaLumberjack/Core
+  - CocoaLumberjack/Extensions (2.2.0):
+    - CocoaLumberjack/Default
   - GoogleMaps (1.11.0)
+  - PubNub (4.2.1):
+    - CocoaLumberjack (= 2.2.0)
+    - PubNub/Core (= 4.2.1)
+  - PubNub/Core (4.2.1):
+    - CocoaLumberjack (= 2.2.0)
 
 DEPENDENCIES:
   - GoogleMaps
+  - PubNub
 
 SPEC CHECKSUMS:
+  CocoaLumberjack: 17fe8581f84914d5d7e6360f7c70022b173c3ae0
   GoogleMaps: 272cf7e7b8aacf4319eac47d57f3b7d142c0826a
+  PubNub: fcfc73f134604c00bf6d54c007965c7c9dc7213d
 
 COCOAPODS: 0.39.0
