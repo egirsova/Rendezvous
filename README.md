@@ -1,5 +1,4 @@
 # Rendezvous
--
 iOS app that helps friends meet up by allowing them to share their locations with each other in real-time.   
 Automatically notifies each individual using push notifications if the friend they are tracking is 5 minutes away or running late (these notifications can be configured in the app settings).
 
